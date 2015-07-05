@@ -1,0 +1,31 @@
+{
+  "name": "ui",
+  "main": "index.js",
+  "version": "0.0.0",
+  "homepage": "https://github.com/foluke-ui-kit/ui",
+  "authors": [
+    "Shawn Sandy <shawnsandy04@gmail.com>"
+  ],
+  "description": "A simple, flexible and feature packed UI toolkit for frontend development -- manage, develop, build and deploy modern webapplication across multiple platforms with ease.",
+  "moduleType": [
+    "amd",
+    "es6",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "UI",
+    "Frontend"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.5"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "ui",
+  "version": "0.0.1",
+  "description": "A simple, flexible and feature packed UI toolkit for frontend development -- manage, develop, build and deploy modern webapplication across multiple platforms with ease.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "bower install",
+    "preinstall": "npm -v && bower -v",
+    "preversion": "npm run build",
+    "postversion": "git push --tags && npm run git-push",
+    "development": "webpack -d --watch & browser-sync start --config bs-config.js ",
+    "git-commit": "git add -A . && git commit -a -m 'Release package'",
+    "git-push": "git push origin develop",
+    "build": "rm -r app/* && webpack -p --progress --colors",
+    "release": "npm run build && npm run git-commit && npm run version:patch",
+    "version:patch": "npm version patch && git push --tags",
+    "liveview": "browser-sync start --config bs-config.js",
+    "updates": "npm update && bower update"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/foluke-ui-kit/ui.git"
+  },
+  "keywords": [
+    "UI",
+    "react",
+    "HTML5"
+  ],
+  "author": "Shawn Sandy <shawnsandy04@gmail.com> (http://shawnsandy.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/foluke-ui-kit/ui/issues"
+  },
+  "homepage": "https://github.com/foluke-ui-kit/ui#readme",
+  "devDependencies": {
+    "babel-core": "^5.6.15",
+    "babel-loader": "^5.3.1",
+    "browser-sync": "^2.7.13",
+    "css-loader": "^0.15.1",
+    "file-loader": "^0.8.4",
+    "gulp": "^3.9.0",
+    "jquery": "^2.1.4",
+    "node-libs-browser": "^0.5.2",
+    "react": "^0.13.3",
+    "style-loader": "^0.12.3",
+    "url-loader": "^0.5.6",
+    "webpack": "^1.10.1"
+  }
+}
